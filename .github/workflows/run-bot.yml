@@ -1,8 +1,9 @@
+
 name: Divar Personal Ads Bot
 
 on:
   schedule:
-    - cron: "*/10 * * * *"
+    - cron: "* * * * *"
   workflow_dispatch:
 
 permissions:
