@@ -171,8 +171,7 @@ def main():
             seen.add(token)
 
         except Exception as error:
-            print("Error:", token, type(error).__name__)
-
+print("Error:", token, type(error).__name__, "HTTP:", getattr(getattr(error, "response", None), "status_code", ""), "DETAIL:", getattr(getattr(error, "response", None), "text", str(error))[:500])
     save_seen(seen)
     print("Finished:", datetime.now())
 
